@@ -414,6 +414,7 @@ class _TransformerPageViewState extends State<TransformerPageView> {
     IndexedWidgetBuilder builder =
         _transformer == null ? _buildItemNormal : _buildItem;
     Widget child = new PageView.builder(
+      allowImplicitScrolling: true,
       itemBuilder: builder,
       itemCount: _pageController.getRealItemCount(),
       onPageChanged: _onIndexChanged,
